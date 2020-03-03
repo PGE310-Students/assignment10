@@ -1,6 +1,8 @@
-# Homework Assignment 9
+# Homework Assignment 10
 
-Open the [Assignment 9 Jupyter Notebook](assignment9.ipynb) and follow the instructions.
+[![Build Status](https://travis-ci.com/PGE310/assignment10.svg?token=SnMGq692xXXqxzyE6QSj&branch=master)](https://travis-ci.com/PGE310/assignment10)
+
+Open the [Assignment 10 Jupyter Notebook](assignment10.ipynb) and follow the instructions.
 
 ## Testing
 
