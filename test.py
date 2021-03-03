@@ -60,24 +60,6 @@ class TestSolution(unittest.TestCase):
                                                 test_image_resized, multichannel=True)
             assert ssim >= 0.75
             
-    def test_plot_private(self):
-        with warnings.catch_warnings():
-            warnings.simplefilter("ignore")
-
-            p = ProductionPlot('33105029270000.csv')
-            p.create_plot()
-            p.save_png()
-
-            gold_image = cv2.imread('images/33105029270000_gold.png')
-            test_image = cv2.imread('33105029270000.png')
-
-            test_image_resized = skimage.transform.resize(test_image, 
-                                                          (gold_image.shape[0], gold_image.shape[1]), 
-                                                          mode='constant')
-
-            ssim = skimage.measure.compare_ssim(skimage.img_as_float(gold_image), 
-                                                test_image_resized, multichannel=True)
-            assert ssim >= 0.75
 
 if __name__ == '__main__':
     unittest.main()
